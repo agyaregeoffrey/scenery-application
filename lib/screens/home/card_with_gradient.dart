@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:scenery_application/component/icon_container.dart';
+import 'package:scenery_application/components/icon_container.dart';
 import 'package:scenery_application/utils/constants.dart';
 import 'package:scenery_application/utils/size_config.dart';
 

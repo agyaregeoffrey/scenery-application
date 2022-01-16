@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:scenery_application/component/icon_container.dart';
+import 'package:scenery_application/components/icon_container.dart';
 import 'package:scenery_application/screens/home/card_with_gradient.dart';
 import 'package:scenery_application/screens/home/nature_categories.dart';
 import 'package:scenery_application/site.dart';
