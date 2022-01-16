@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:scenery_application/screens/home/home.dart';
+import 'package:scenery_application/utils/constants.dart';
+import 'package:scenery_application/utils/size_config.dart';
 
 
 class MyApp extends StatelessWidget {
@@ -10,11 +13,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Scenery',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        fontFamily: 'Poppins',
+        scaffoldBackgroundColor: Colors.white
       ),
-      home: Scaffold(
-
-      ),
+      home: const Home(),
     );
   }
 }
