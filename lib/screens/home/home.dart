@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:scenery_application/component/icon_container.dart';
 import 'package:scenery_application/screens/home/card_with_gradient.dart';
 import 'package:scenery_application/screens/home/nature_categories.dart';
@@ -15,6 +16,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  final int _currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
@@ -79,6 +81,40 @@ class _HomeState extends State<Home> {
           ),
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+          currentIndex: _currentIndex,
+          type: BottomNavigationBarType.fixed,
+          backgroundColor: Colors.white,
+          selectedItemColor: navIconColor,
+          selectedFontSize: 12,
+          unselectedFontSize: 12,
+          onTap: (value) {},
+          items: [
+            BottomNavigationBarItem(
+                icon: SvgPicture.asset(
+                  'assets/icons/home.svg',
+                  color: _currentIndex == 0 ? navIconColor : colorGrey,
+                ),
+                label: 'Home'),
+            BottomNavigationBarItem(
+                icon: SvgPicture.asset(
+                  'assets/icons/search.svg',
+                  color: _currentIndex == 1 ? navIconColor : colorGrey,
+                ),
+                label: 'Search'),
+            BottomNavigationBarItem(
+                icon: SvgPicture.asset(
+                  'assets/icons/fav.svg',
+                  color: _currentIndex == 2 ? navIconColor : colorGrey,
+                ),
+                label: 'Favorites'),
+            BottomNavigationBarItem(
+                icon: SvgPicture.asset(
+                  'assets/icons/profile.svg',
+                  color: _currentIndex == 3 ? navIconColor : colorGrey,
+                ),
+                label: 'Profile'),
+          ]),
     );
   }
 
