@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:scenery_application/components/icon_container.dart';
+import 'package:scenery_application/components/search_text_field.dart';
 import 'package:scenery_application/utils/constants.dart';
 import 'package:scenery_application/utils/size_config.dart';
 
@@ -63,24 +65,10 @@ class CardWithGradient extends StatelessWidget {
             SizedBox(
               height: getProportionateScreenHeight(30.0),
             ),
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(10.0),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.only(left: 15, right: 15, top: 5),
-                child: TextFormField(
-                  controller: _searchController,
-                  validator: (value) {
-                    if (value!.isEmpty) {}
-                  },
-                  decoration: const InputDecoration(
-                    border: InputBorder.none,
-                    hintText: 'Type to explore',
-                  ),
-                ),
-              ),
+            SearchTextField(
+              searchController: _searchController,
+              backgroundColor: Colors.white,
+              hint: 'Type to explore',
             ),
           ],
         ),
