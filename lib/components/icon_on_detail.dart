@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:scenery_application/utils/constants.dart';
 import 'package:scenery_application/utils/size_config.dart';
 

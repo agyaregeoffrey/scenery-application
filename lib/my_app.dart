@@ -64,7 +64,12 @@ class _MyAppState extends State<MyApp> {
                 ),
                 label: 'Profile'),
           ],
-          onTap: (value) => _currentIndex = value,
+          onTap: (value) {
+            print(value);
+            setState(() {
+              _currentIndex = value;
+            });
+          },
         ),
         body: _screens[_currentIndex],
       ),

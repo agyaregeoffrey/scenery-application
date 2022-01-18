@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:scenery_application/components/app_bar_title.dart';
-import 'package:scenery_application/components/icon_container.dart';
 import 'package:scenery_application/components/icon_on_detail.dart';
 import 'package:scenery_application/site.dart';
 import 'package:scenery_application/utils/constants.dart';
