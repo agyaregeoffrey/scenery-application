@@ -2,12 +2,16 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+// Padding values
+const gridPadding = 5.0;
+
 const primaryLightColor = Color(0xFFA0AEBC);
 const primaryTextColor = Color(0xFF000000);
 const colorGrey = Color(0xFFB3B7C4);
 const lightGrey = Color(0xFFECECEC);
 const iconColor = Color(0xFFB3B7C4);
 const navIconColor = Color(0xFF00BFFB);
+const cursorColor = Color(0xFF81E1FF);
 Color lightGreyWithOpacity = lightGrey.withOpacity(0.5);
 
 const gradientColors = [Color(0xFF5EFFB1), Color(0xFF81E1FF)];

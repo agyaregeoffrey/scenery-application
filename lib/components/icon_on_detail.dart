@@ -1,19 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:scenery_application/utils/constants.dart';
 import 'package:scenery_application/utils/size_config.dart';
 
-class IconContainer extends StatelessWidget {
-  const IconContainer({
+class IconOnDetail extends StatelessWidget {
+  const IconOnDetail({
     Key? key,
     required this.icon,
-    required this.height,
-    required this.width,
   }) : super(key: key);
 
-  final String icon;
-  final double height;
-  final double width;
+  final IconData icon;
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -23,15 +18,14 @@ class IconContainer extends StatelessWidget {
         borderRadius: BorderRadius.circular(10.0),
         onTap: () {},
         child: SizedBox(
-          width: getProportionateScreenWidth(width),
-          height: getProportionateScreenHeight(height),
+          width: getProportionateScreenWidth(50),
+          height: getProportionateScreenHeight(70),
           child: Center(
-            child: SvgPicture.asset(
-              icon,
-              height: 25.0,
-              width: 25.0,
-            ),
-          ),
+              child: Icon(
+            icon,
+            color: Colors.white,
+            size: 25,
+          )),
         ),
       ),
     );
