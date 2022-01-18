@@ -13,9 +13,9 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  int _currentIndex = 0;
   @override
   Widget build(BuildContext context) {
-    int _currentIndex = 0;
     const List<Widget> _screens = [
       Home(),
       Search(),
@@ -65,7 +65,6 @@ class _MyAppState extends State<MyApp> {
                 label: 'Profile'),
           ],
           onTap: (value) {
-            print(value);
             setState(() {
               _currentIndex = value;
             });

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:scenery_application/utils/constants.dart';
 import 'package:scenery_application/utils/size_config.dart';
 
 class IconContainer extends StatelessWidget {
@@ -16,7 +17,7 @@ class IconContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.white,
+      color: lightGreyWithOpacity,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
       child: InkWell(
         borderRadius: BorderRadius.circular(10.0),
