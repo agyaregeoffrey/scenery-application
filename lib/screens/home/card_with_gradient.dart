@@ -13,8 +13,8 @@ class CardWithGradient extends StatelessWidget {
   Widget build(BuildContext context) {
     final _searchController = TextEditingController();
     return Container(
-      width: getProportionateScreenWidth(400.0),
-      height: getProportionateScreenHeight(400.0),
+      width: 400.0,
+      height: 300.0,
       decoration: BoxDecoration(
           borderRadius: const BorderRadius.all(
             Radius.circular(16.0),
@@ -50,12 +50,12 @@ class CardWithGradient extends StatelessWidget {
                 const IconContainer(
                   icon: 'assets/icons/notification.svg',
                   width: 50.0,
-                  height: 70.0,
+                  height: 50.0,
                 ),
               ],
             ),
             SizedBox(
-              height: getProportionateScreenHeight(90.0),
+              height: getProportionateScreenHeight(70.0),
             ),
             Text(
               'What do \nyou want to explore today?',

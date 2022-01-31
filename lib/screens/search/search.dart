@@ -12,6 +12,7 @@ class Search extends StatefulWidget {
 }
 
 class _SearchState extends State<Search> {
+  final sites = Site.sites;
   final _searchController = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -49,12 +50,13 @@ class _SearchState extends State<Search> {
                                   site: sites[index],
                                 )));
                   },
-                  child: Container(
-                    color: lightGrey,
-                    width: 20.0,
-                    height: 20.0,
-                    child: Hero(
-                      tag: sites[index].id,
+                  child: Hero(
+                    tag: heroTag,
+                    transitionOnUserGestures: true,
+                    child: Container(
+                      color: lightGrey,
+                      width: 20.0,
+                      height: 20.0,
                       child: Image.asset(
                         sites[index].image,
                         fit: BoxFit.fill,

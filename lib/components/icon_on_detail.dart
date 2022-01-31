@@ -19,7 +19,7 @@ class IconOnDetail extends StatelessWidget {
         onTap: () {},
         child: SizedBox(
           width: getProportionateScreenWidth(50),
-          height: getProportionateScreenHeight(70),
+          height: getProportionateScreenHeight(50),
           child: Center(
               child: Icon(
             icon,

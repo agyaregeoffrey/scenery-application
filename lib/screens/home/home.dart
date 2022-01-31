@@ -16,6 +16,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  final sites = Site.sites;
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
@@ -97,56 +98,60 @@ class _HomeState extends State<Home> {
               ),
             );
           },
-          child: Container(
-            margin: const EdgeInsets.only(right: 20.0),
-            width: getProportionateScreenWidth(180),
-            height: getProportionateScreenHeight(280),
-            decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(16.0),
-                boxShadow: [cardBottomShadow]),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                ClipRRect(
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(16.0),
-                    topRight: Radius.circular(16.0),
+          child: Hero(
+            tag: heroTag,
+            transitionOnUserGestures: true,
+            child: Container(
+              margin: const EdgeInsets.only(right: 20.0),
+              width: getProportionateScreenWidth(180),
+              height: getProportionateScreenHeight(280),
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(16.0),
+                  boxShadow: [cardBottomShadow]),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  ClipRRect(
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(16.0),
+                      topRight: Radius.circular(16.0),
+                    ),
+                    child: Image.asset(
+                      sites[index].image,
+                      height: 140,
+                      width: getProportionateScreenWidth(280),
+                      fit: BoxFit.cover,
+                    ),
                   ),
-                  child: Image.asset(
-                    sites[index].image,
-                    height: 140,
-                    width: getProportionateScreenWidth(280),
-                    fit: BoxFit.cover,
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      sites[index].name,
+                      style: captionTextStyle.copyWith(fontSize: 12.0),
+                    ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    sites[index].name,
-                    style: captionTextStyle.copyWith(fontSize: 12.0),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: Row(
-                    children: [
-                      Text(
-                        sites[index].location,
-                        style: descriptionTextStyle.copyWith(fontSize: 10.0),
-                      ),
-                      SizedBox(
-                        width: getProportionateScreenWidth(30),
-                      ),
-                      const IconContainer(
-                        icon: 'assets/icons/favorite.svg',
-                        width: 30,
-                        height: 30,
-                      )
-                    ],
-                  ),
-                )
-              ],
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    child: Row(
+                      children: [
+                        Text(
+                          sites[index].location,
+                          style: descriptionTextStyle.copyWith(fontSize: 10.0),
+                        ),
+                        SizedBox(
+                          width: getProportionateScreenWidth(30),
+                        ),
+                        const IconContainer(
+                          icon: 'assets/icons/favorite.svg',
+                          width: 30,
+                          height: 30,
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
         ),

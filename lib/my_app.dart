@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:scenery_application/components/app_bar_title.dart';
+import 'package:scenery_application/screens/favorites/favorites.dart';
 import 'package:scenery_application/screens/home/home.dart';
+import 'package:scenery_application/screens/profile/profile.dart';
 import 'package:scenery_application/screens/search/search.dart';
 import 'package:scenery_application/utils/constants.dart';
 
@@ -19,6 +21,8 @@ class _MyAppState extends State<MyApp> {
     const List<Widget> _screens = [
       Home(),
       Search(),
+      Favorites(),
+      Profile(),
     ];
     return MaterialApp(
       title: 'Scenery',

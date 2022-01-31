@@ -53,3 +53,6 @@ const descriptionTextStyle = TextStyle(
 // Pref keys
 const emailKey = 'email';
 const passwordKey = 'password';
+
+// Tags
+const heroTag = "my_tag";
